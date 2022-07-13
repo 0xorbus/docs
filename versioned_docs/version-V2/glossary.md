@@ -18,8 +18,11 @@ When a node is added, the tree _root hash_ is recalculated and can be used as a 
 
 ## Merkle tree
 
-A tree in which every leaf (i.e., a node that doesn't have children) is labelled with the cryptographic hash of a data block,
-and every node that isn't a leaf is labelled with the cryptographic hash of its child node labels.
+A tree-like data structure used to encode blockchain data.
+In the tree, _leaves_ are nodes that don't have children.
+Each leaf is labelled with the cryptographic hash of a data block.
+Every node that has children is labelled with the cryptographic hash of its child node labels.
+
 In zero-knowledge protocols, Merkle trees can be used to efficiently summarize and validate large data sets.
 To validate that a tree contains a specific leaf, a verifier only needs a portion of the complete data structure.
 
